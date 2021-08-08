@@ -153,12 +153,12 @@ totalAllPetAges(pets);
 
 function averageAllPetAges(age) {
     let averageAge = 0;
-    let average = 0;
+    let ageLength = [];
 for(let ages of age){
     averageAge += ages.age;
-    average = averageAge/6;
+    ageLength.push(ages.age);
 }
-return average;
+return averageAge/ageLength.length;
 }
 averageAllPetAges(pets);
 
@@ -185,6 +185,7 @@ function averageAllCaretakerAges(caretakerAge) {
     }
     let totalAge = 0;
     let arr1 = [];
+
     for(let i = 0;i < arr.length;i++){
       totalAge += arr[i];
       arr1.push(arr[i])
