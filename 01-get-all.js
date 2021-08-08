@@ -181,13 +181,15 @@ function averageAllCaretakerAges(caretakerAge) {
     for(let i = 0;i < caretakerAge.length;i++){
         caretakerAges = caretakerAge[i].caretakerAge;
         arr.push(caretakerAges);
-        arr = arr.map(Number); // converted string to number
+        arr = arr.map(Number);
     }
     let totalAge = 0;
+    let arr1 = [];
     for(let i = 0;i < arr.length;i++){
       totalAge += arr[i];
+      arr1.push(arr[i])
     }
-     return totalAge/6;
+     return totalAge/arr1.length;
+    // return arr;
 }
 averageAllCaretakerAges(pets);
-
